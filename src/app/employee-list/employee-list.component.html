@@ -1,0 +1,74 @@
+<h1 style="text-align: center;">Employee List Page</h1>
+<table class="table" style=width:80%;margin:auto>
+  <tr>
+    <th>
+  <form class="form-inline my-2 my-lg-0">
+    <input class="form-control mr-sm-2" type="search" [(ngModel)]="firstName" placeholder="First Name"  aria-label="Search" [ngModelOptions]="{standalone: true}">
+    <button class="btn btn-outline-success my-2 my-sm-0" (click)='searchByFirstName()' type="submit">Search</button>
+  </form>
+  </th>
+  <th>
+  <form class="form-inline my-2 my-lg-0">
+    <input class="form-control mr-sm-2" type="search" [(ngModel)]="surName" placeholder="Sur Name"  aria-label="Search" [ngModelOptions]="{standalone: true}">
+    <button class="btn btn-outline-success my-2 my-sm-0"  (click)='searchBySurName()' type="submit">Search</button>
+  </form>
+  </th>
+  <th>
+  <form class="form-inline my-2 my-lg-0">
+    <input class="form-control mr-sm-2" type="search" [(ngModel)]="pincode" placeholder="Pincode"  aria-label="Search" [ngModelOptions]="{standalone: true}">
+    <button class="btn btn-outline-success my-2 my-sm-0"  (click)='searchByPincode()' type="submit">Search</button>
+  </form>
+  </th>
+  <th>
+    <div class="form-group" style="color: blue;">
+      <label>SortByDob</label>
+      <select  [(ngModel)]="sortDob" id="sortDob" (change)='sortByDob()'>
+        <option value="" selected="selected">Select</option>
+        <option value="asc">ASC</option>
+        <option value="desc">DESC</option>
+      </select>
+      </div>
+      <div class="form-group" style="color: blue;">
+        <label>SortByDoj</label>
+        <select  [(ngModel)]="sortDoj"  (change)='sortByDoj()'>
+          <option value="" selected="selected">Select</option>
+          <option value="asc">ASC</option>
+          <option value="desc">DESC</option>
+        </select>
+        </div>
+  </th>
+  </tr>
+  
+</table>
+
+<table class="table" style=width:80%;margin:auto>
+<tr class="bg-info text-white">  
+    <th>First Name</th>
+    <th>Sur Name</th>
+    <th>DOB</th>
+    <th
+    >Mobile Number</th>
+    <th>DOJ</th>
+    <th>Country</th>
+    <th>State</th>
+    <th>City</th>
+    <th>Pincode</th>
+    <th>Actions</th>
+</tr>
+<tr *ngFor="let employee of employees">
+  <td>{{employee.firstName}}</td>
+  <td>{{employee.surName}}</td>
+  <td>{{employee.employeeDob}}</td>
+  <td>{{employee.mobileNumber}}</td>
+  <td>{{employee.employeeDoj}}</td>
+  <td>{{employee.country}}</td>
+  <td>{{employee.state}}</td>
+  <td>{{employee.city}}</td>
+  <td>{{employee.pincode}}</td>
+<td>
+  <button class="btn btn-success" (click)='updateEmployee(employee.employeeId)'>Edit</button>
+  <button class="btn btn-danger" (click)='deleteEmployee(employee.employeeId)'>Delete</button>
+</td>
+</tr>
+
+</table>

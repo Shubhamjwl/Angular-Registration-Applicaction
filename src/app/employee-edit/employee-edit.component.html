@@ -1,0 +1,73 @@
+<h1 style="text-align: center;">Employee Update Page</h1>
+<div style="margin-top:5%; margin-left: 10%;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="row" style="margin:auto">
+      <div class="col-md-3">
+        <div class="form-group">
+          <label>First Name</label>
+          <input type="text" class="form-control" placeholder="Enter First Name" id="firstName" [(ngModel)]="employee.firstName" name="firstName" required>
+        </div>
+        </div>
+        <div class="col-md-3">
+          <div class="form-group">
+            <label>Sur Name</label>
+            <input type="text" class="form-control" placeholder="Enter Sur Name" id="surName" [(ngModel)]="employee.surName" name="surName" required>
+          </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label>DOB</label>
+              <input type="date" class="form-control" placeholder="Enter DOB" id="employeeDob" [(ngModel)]="employee.employeeDob"
+                name="employeeDob" required>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="margin:auto">
+          <div class="col-md-3">
+        <div class="form-group">
+          <label>Mobile Number</label>
+          <input type="text" class="form-control" placeholder="Enter Mobile Number" id="mobileNumber" [(ngModel)]="employee.mobileNumber"
+            name="mobileNumber" required="required">
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <label>DOJ</label>
+          <input type="date" class="form-control" placeholder="Enter DOJ" id="employeeDoj" [(ngModel)]="employee.employeeDoj" name="employeeDoj" required>
+        </div>
+        </div>
+        <div class="col-md-3">
+        <div class="form-group">
+          <label>Country</label>
+          <input type="text" class="form-control" placeholder="Enter Country" id="country" [(ngModel)]="employee.country" name="country" required>
+        </div>
+        </div>
+      </div>
+      <div class="row" style="margin:auto">
+      <div class="col-md-3">
+        <div class="form-group">
+          <label>State</label>
+          <input type="text" class="form-control" placeholder="Enter State" id="state" [(ngModel)]="employee.state" name="state" required>
+        </div>
+        </div>
+        <div class="col-md-3">
+        <div class="form-group">
+          <label>City</label>
+          <input type="text" class="form-control" placeholder="Enter City" id="city" [(ngModel)]="employee.city" name="city" required>
+        </div>
+        </div>
+        <div class="col-md-3">
+        <div class="form-group">
+          <label>Pincode</label>
+          <input type="number" class="form-control" placeholder="Enter Pincode" id="pincode" [(ngModel)]="employee.pincode" name="pincode" required>
+        </div>
+        </div>
+      </div>
+      <div class="row">
+          <div class="col-md-4"></div>
+              <div class="col-md-1">
+        <button  class="btn btn-success" type="submit">Update </button>
+    </div>
+    </div>
+  </form>
+</div>
